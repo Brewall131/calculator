@@ -1,7 +1,17 @@
+
 .center{
 	display: inline-block;
 }
 
 .container {
-	width: 140px;
+	width: 180px;
 }
+
+.btn {
+	width: 42.91px;
+}
+
+#equals {
+	width:  128.73px;
+}
+
