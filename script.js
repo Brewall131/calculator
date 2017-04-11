@@ -65,7 +65,18 @@ $(document).ready(function(){
 	//functions for + - * / using integerArray
 	
 	//add them
-	
+	$('#plus').click(function(){
+		var total = integerArray.reduce(add, 0)
+			function add(a, b) {
+				return a + b
+			}
+		answer = total;
+	})
+
+	//show current answer
+	$('#equals').click(function(){
+		console.log(answer);
+	})
 	
 
 });
