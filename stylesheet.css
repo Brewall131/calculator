@@ -4,14 +4,43 @@
 }
 
 .container {
-	width: 180px;
+	width: 250px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color:  #c0c0c0;
+	border-radius: 4px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+.row{
+	float:  none;
+	margin:  0 auto;
+	width: 200px;
 }
 
 .btn {
 	width: 42.91px;
+	margin: 3px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
 }
 
 #equals {
-	width:  85.82px;
+	width:  91.82px;
+}
+#clear {
+	width: 189.64px;
+}
+#results {
+	width: 189.64px;
+	height: 30px;
+	border: 1px solid  #c0c0c0;
+	margin:  3px auto;
+	float:  none;
+	background-color: white;
+	border-radius: 2px;
+}
+#title {
+	color: white;
+	
 }
 

@@ -8,6 +8,23 @@ var operand2 = "";
 	
 var answer = "";
 
+var equals = "=";
+
+function setVariables (integer) {
+
+		if (operator == "") {
+			operand1 += integer;
+			$('#results').html(operand1);
+		}
+		else {
+			operand2 += integer;
+			$('#results').html(operand1.concat(operator, operand2));
+		}
+
+}
+
+//next step, have calculator show results all the time
+
 $(document).ready(function(){
 
 	//center the calculator
@@ -23,138 +40,68 @@ $(document).ready(function(){
 
 	//variables to plaace the integers and operators into 
 	//changing variables as the code runs
-	
-	
-	//CURRENT PROBLEM: numbers are not seperating out when an operator is entered.
-
-	//will need to destringify next.
 
 	//event listeners to store data in the variables above
 	//Numbers
 	$('#zero').click(function(){
 		var integer = "0";
-
-		if (operator == "") {
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#one').click(function(){
 		var integer = "1";
-
-		if (operator == "") {
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#two').click(function(){
 		var integer = "2";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#three').click(function(){
 		var integer = "3";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#four').click(function(){
 		var integer = "4";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#five').click(function(){
 		var integer = "5";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#six').click(function(){
 		var integer = "6";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#seven').click(function(){
 		var integer = "7";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#eight').click(function(){
 		var integer = "8";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 	$('#nine').click(function(){
 		var integer = "9";
-
-		if (operator == "" ){
-			operand1 += integer;
-		}
-		else {
-			operand2 += integer;
-		}
-		
+		setVariables (integer);
 	})
 
 
 	//add operators to the operator variable string
+	//push operator to results screen for viewing
 	$('#plus').click(function(){
 		 operator = "+";
+		 $('#results').html(operand1.concat(operator));
 	})
 	$('#minus').click(function(){
 		 operator = "-";
+		 $('#results').html(operand1.concat(operator));
 	})
 	$('#multiply').click(function(){
 		 operator = "*";
+		 $('#results').html(operand1.concat(operator));
 	})
 	$('#divide').click(function(){
 		 operator = "/";
+		 $('#results').html(operand1.concat(operator));
 	})
 
 	//show current answer when = is hit
@@ -162,6 +109,20 @@ $(document).ready(function(){
 		 answer = operand1.concat(operator, operand2);
 		 answer = eval(answer);
 		 console.log(answer);
+
+		 //push results to the screen
+		 $('#results').html(operand1.concat(operator, operand2, equals, answer));
+	})
+
+	//clear the variables when clear is clicked
+	$('#clear').click(function(){
+		operand1 = "";
+		operator = "";
+		operand2 = "";
+		answer = "";
+		
+		 $('#results').html(answer);
+
 	})
 	
 
